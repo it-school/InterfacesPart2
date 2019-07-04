@@ -82,6 +82,7 @@
             this.comboBoxVesselType.Name = "comboBoxVesselType";
             this.comboBoxVesselType.Size = new System.Drawing.Size(148, 24);
             this.comboBoxVesselType.TabIndex = 3;
+            this.comboBoxVesselType.SelectedIndexChanged += new System.EventHandler(this.comboBoxVesselType_SelectedIndexChanged);
             // 
             // hScrollMaxSpeed
             // 
@@ -123,6 +124,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "PNG|*png";
             // 
             // label1
             // 
@@ -180,9 +182,9 @@
             this.labelDraught.Font = new System.Drawing.Font("Poor Richard", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDraught.Location = new System.Drawing.Point(731, 80);
             this.labelDraught.Name = "labelDraught";
-            this.labelDraught.Size = new System.Drawing.Size(16, 23);
+            this.labelDraught.Size = new System.Drawing.Size(29, 23);
             this.labelDraught.TabIndex = 13;
-            this.labelDraught.Text = "1";
+            this.labelDraught.Text = "0.1";
             // 
             // button2
             // 

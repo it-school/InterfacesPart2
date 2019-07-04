@@ -32,4 +32,5 @@ namespace InterfacesPart1
             return $"{Title} ({Type}), {MaxSpeed} {SpeedUnit}, {Draught} m, {Date} : {Price} m\n";
         }
     }
+
 }

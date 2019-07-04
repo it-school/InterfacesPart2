@@ -13,6 +13,8 @@ namespace InterfacesPart2
     public partial class Form1 : Form
     {
         InterfacesPart1.BoatShop boatShop;
+        Dictionary<int, string> dic = new Dictionary<int, string>();
+
 
         public Form1()
         {
@@ -25,12 +27,20 @@ namespace InterfacesPart2
             Array mas2 = InterfacesPart1.SpeedUnit.GetValues(typeof(InterfacesPart1.SpeedUnit));
             foreach (InterfacesPart1.SpeedUnit name in mas2)
                 comboBoxSpeedUnit.Items.Add(name);
+
+            dic.Add(5, "Red");
+            dic.Add(7, "Black");
+            dic.Add(10, "White");
+            foreach (var item in dic)
+            {
+                comboBoxSpeedUnit.Items.Add(item.Value);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog().Equals(DialogResult.OK))
-                {
+            {
                 boatShop.Photo = openFileDialog1.FileName;
                 pictureBox1.Image = Image.FromFile(boatShop.Photo);
             }
@@ -79,5 +89,19 @@ namespace InterfacesPart2
 
             hScrollMaxSpeed.Value = hScrollMaxSpeed.Maximum;
         }
+
+        private void comboBoxVesselType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBoxVesselType.SelectedIndex)
+            {
+                case 0:
+                    pictureBox1.Image = Image.FromFile(@"d:\qrcode.png");
+                    break;
+                case 1:
+                    pictureBox1.Image = Image.FromFile(@"d:\boat.png");
+                    break;
+            }
+        }
+
     }
 }
