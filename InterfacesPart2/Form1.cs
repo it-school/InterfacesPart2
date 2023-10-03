@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace InterfacesPart2
@@ -95,10 +90,10 @@ namespace InterfacesPart2
             switch (comboBoxVesselType.SelectedIndex)
             {
                 case 0:
-                    pictureBox1.Image = Image.FromFile(@"d:\qrcode.png");
+           //         pictureBox1.Image = Image.FromFile(@"d:\qrcode.png");
                     break;
                 case 1:
-                    pictureBox1.Image = Image.FromFile(@"d:\boat.png");
+          //          pictureBox1.Image = Image.FromFile(@"d:\boat.png");
                     break;
             }
         }
