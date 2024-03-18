@@ -46,6 +46,8 @@ namespace InterfacesPart2
             boatShop.Date = DateTime.Now;
             boatShop.Price = Convert.ToDouble(textBoxPrice.Text);
             boatShop.MaxSpeed = Convert.ToInt32(labelSpeed.Text);
+
+            
             // TODO Закончить считывание данных объекта
         }
 
